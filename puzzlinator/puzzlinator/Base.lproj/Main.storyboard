@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--mainMenu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="puzzlinator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainMenu" title="mainMenu" id="BYZ-38-t0r" customClass="ViewController" customModule="puzzlinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,10 +77,76 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="O9t-iF-w7F" kind="show" identifier="toSudoku" id="O1O-o1-X8z"/>
+                        <segue destination="hVB-Px-HMn" kind="show" identifier="to8puzzle" id="FiY-cb-2y2"/>
+                        <segue destination="8XI-BF-PU4" kind="show" identifier="toTowers" id="ILF-UG-g6O"/>
+                        <segue destination="rRG-Bv-0c6" kind="show" identifier="toTents" id="Sr4-mV-3AJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+        <!--sudoku-->
+        <scene sceneID="1vX-AL-qvi">
+            <objects>
+                <viewController storyboardIdentifier="sudoku" title="sudoku" id="O9t-iF-w7F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oY8-0s-cV3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="s47-Dg-mCC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkX-jJ-b9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="-654"/>
+        </scene>
+        <!--8puzzle-->
+        <scene sceneID="XNq-Or-1ia">
+            <objects>
+                <viewController storyboardIdentifier="8puzzle" title="8puzzle" id="hVB-Px-HMn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zKo-wB-5c5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lr3-nV-XmB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0XU-09-gzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="-416"/>
+        </scene>
+        <!--tents-->
+        <scene sceneID="iqt-WF-OIv">
+            <objects>
+                <viewController storyboardIdentifier="tents" title="tents" id="rRG-Bv-0c6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7cL-HY-AQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Ug-00-g2K"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQd-xj-LSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="597"/>
+        </scene>
+        <!--towers-->
+        <scene sceneID="sTe-sG-VLH">
+            <objects>
+                <viewController storyboardIdentifier="towers" title="towers" id="8XI-BF-PU4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kHJ-ie-gFE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cGQ-kp-Nup"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="60r-o9-Gz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="277"/>
         </scene>
     </scenes>
 </document>

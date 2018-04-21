@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let gameNames = ["Suduko", "Towers", "8-puzzle", "Tents"]
     let imageNames = ["placeholder", "placeholder", "placeholder", "placeholder"]
+    let segues = ["toSudoku", "toTowers", "to8puzzle", "toTents"		]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gameNames.count;
@@ -26,6 +27,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    func tableView(_ tableview: UITableView, didSelectRowAt indexpath: IndexPath) {
+        performSegue(withIdentifier: segues[indexpath.row], sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
