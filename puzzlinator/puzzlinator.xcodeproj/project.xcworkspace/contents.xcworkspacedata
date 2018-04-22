@@ -2,16 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/ookadablabla/Desktop/392 Final/puzzlinator/puzzlinator/ViewControllerTableViewCell.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/ookadablabla/Desktop/392 Final/puzzlinator/puzzlinator/Assets.xcassets">
-   </FileRef>
-   <Group
-      location = "container:"
-      name = "New Group">
-   </Group>
-   <FileRef
       location = "self:puzzlinator.xcodeproj">
    </FileRef>
 </Workspace>

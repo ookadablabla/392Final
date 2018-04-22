@@ -15,6 +15,8 @@
 		C32763C2208BBECF00C9F365 /* puzzlinatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763C1208BBECF00C9F365 /* puzzlinatorUITests.swift */; };
 		C32763D2208BC49000C9F365 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C32763D1208BC49000C9F365 /* placeholder.png */; };
 		C32763D4208BC66F00C9F365 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763D3208BC66F00C9F365 /* ViewControllerTableViewCell.swift */; };
+		C3E6E767208C665D002F7332 /* TowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6E766208C665D002F7332 /* TowersViewController.swift */; };
+		C3E6E769208C678B002F7332 /* TowersGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6E768208C678B002F7332 /* TowersGameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		C32763D0208BC42E00C9F365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/ookadablabla/Desktop/392 Final/puzzlinator/puzzlinator/Assets.xcassets"; sourceTree = "<absolute>"; };
 		C32763D1208BC49000C9F365 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = Assets.xcassets/placeholder.png; sourceTree = "<group>"; };
 		C32763D3208BC66F00C9F365 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerTableViewCell.swift; path = "/Users/ookadablabla/Desktop/392 Final/puzzlinator/puzzlinator/ViewControllerTableViewCell.swift"; sourceTree = "<absolute>"; };
+		C3E6E766208C665D002F7332 /* TowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowersViewController.swift; sourceTree = "<group>"; };
+		C3E6E768208C678B002F7332 /* TowersGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowersGameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		C32763A0208BBEC500C9F365 /* puzzlinator */ = {
 			isa = PBXGroup;
 			children = (
+				C3E6E765208C6645002F7332 /* Towers */,
 				C32763D3208BC66F00C9F365 /* ViewControllerTableViewCell.swift */,
 				C32763D0208BC42E00C9F365 /* Assets.xcassets */,
 				C32763D1208BC49000C9F365 /* placeholder.png */,
@@ -128,6 +133,15 @@
 				C32763C3208BBECF00C9F365 /* Info.plist */,
 			);
 			path = puzzlinatorUITests;
+			sourceTree = "<group>";
+		};
+		C3E6E765208C6645002F7332 /* Towers */ = {
+			isa = PBXGroup;
+			children = (
+				C3E6E766208C665D002F7332 /* TowersViewController.swift */,
+				C3E6E768208C678B002F7332 /* TowersGameController.swift */,
+			);
+			path = Towers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E6E767208C665D002F7332 /* TowersViewController.swift in Sources */,
 				C32763A4208BBEC500C9F365 /* ViewController.swift in Sources */,
+				C3E6E769208C678B002F7332 /* TowersGameController.swift in Sources */,
 				C32763A2208BBEC500C9F365 /* AppDelegate.swift in Sources */,
 				C32763D4208BC66F00C9F365 /* ViewControllerTableViewCell.swift in Sources */,
 			);
