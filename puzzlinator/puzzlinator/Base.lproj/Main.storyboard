@@ -91,7 +91,7 @@
         <!--sudoku-->
         <scene sceneID="1vX-AL-qvi">
             <objects>
-                <viewController storyboardIdentifier="sudoku" title="sudoku" id="O9t-iF-w7F" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sudoku" title="sudoku" id="O9t-iF-w7F" customClass="SudokuViewController" customModule="puzzlinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oY8-0s-cV3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
