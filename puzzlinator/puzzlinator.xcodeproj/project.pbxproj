@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78071700208E295500C46BC4 /* TableViewCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780716FF208E295500C46BC4 /* TableViewCellViewController.swift */; };
 		C32763A2208BBEC500C9F365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763A1208BBEC500C9F365 /* AppDelegate.swift */; };
 		C32763A4208BBEC500C9F365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763A3208BBEC500C9F365 /* ViewController.swift */; };
 		C32763A7208BBEC500C9F365 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32763A5208BBEC500C9F365 /* Main.storyboard */; };
 		C32763AC208BBECE00C9F365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32763AA208BBECE00C9F365 /* LaunchScreen.storyboard */; };
 		C32763B7208BBECF00C9F365 /* puzzlinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763B6208BBECF00C9F365 /* puzzlinatorTests.swift */; };
 		C32763C2208BBECF00C9F365 /* puzzlinatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763C1208BBECF00C9F365 /* puzzlinatorUITests.swift */; };
-		C32763D2208BC49000C9F365 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C32763D1208BC49000C9F365 /* placeholder.png */; };
-		C32763D4208BC66F00C9F365 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763D3208BC66F00C9F365 /* ViewControllerTableViewCell.swift */; };
 		C3E6E767208C665D002F7332 /* TowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6E766208C665D002F7332 /* TowersViewController.swift */; };
 		C3E6E769208C678B002F7332 /* TowersGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6E768208C678B002F7332 /* TowersGameController.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		780716FF208E295500C46BC4 /* TableViewCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewController.swift; sourceTree = "<group>"; };
 		C327639E208BBEC500C9F365 /* puzzlinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = puzzlinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32763A1208BBEC500C9F365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C32763A3208BBEC500C9F365 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,9 +49,6 @@
 		C32763BD208BBECF00C9F365 /* puzzlinatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = puzzlinatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32763C1208BBECF00C9F365 /* puzzlinatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = puzzlinatorUITests.swift; sourceTree = "<group>"; };
 		C32763C3208BBECF00C9F365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C32763D0208BC42E00C9F365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/ookadablabla/Desktop/392 Final/puzzlinator/puzzlinator/Assets.xcassets"; sourceTree = "<absolute>"; };
-		C32763D1208BC49000C9F365 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = Assets.xcassets/placeholder.png; sourceTree = "<group>"; };
-		C32763D3208BC66F00C9F365 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerTableViewCell.swift; path = "/Users/ookadablabla/Desktop/392 Final/puzzlinator/puzzlinator/ViewControllerTableViewCell.swift"; sourceTree = "<absolute>"; };
 		C3E6E766208C665D002F7332 /* TowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowersViewController.swift; sourceTree = "<group>"; };
 		C3E6E768208C678B002F7332 /* TowersGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowersGameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,14 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				C3E6E765208C6645002F7332 /* Towers */,
-				C32763D3208BC66F00C9F365 /* ViewControllerTableViewCell.swift */,
-				C32763D0208BC42E00C9F365 /* Assets.xcassets */,
-				C32763D1208BC49000C9F365 /* placeholder.png */,
 				C32763A1208BBEC500C9F365 /* AppDelegate.swift */,
 				C32763A3208BBEC500C9F365 /* ViewController.swift */,
 				C32763A5208BBEC500C9F365 /* Main.storyboard */,
 				C32763AA208BBECE00C9F365 /* LaunchScreen.storyboard */,
 				C32763AD208BBECE00C9F365 /* Info.plist */,
+				780716FF208E295500C46BC4 /* TableViewCellViewController.swift */,
 			);
 			path = puzzlinator;
 			sourceTree = "<group>";
@@ -249,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32763AC208BBECE00C9F365 /* LaunchScreen.storyboard in Resources */,
-				C32763D2208BC49000C9F365 /* placeholder.png in Resources */,
 				C32763A7208BBEC500C9F365 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78071700208E295500C46BC4 /* TableViewCellViewController.swift in Sources */,
 				C3E6E767208C665D002F7332 /* TowersViewController.swift in Sources */,
 				C32763A4208BBEC500C9F365 /* ViewController.swift in Sources */,
 				C3E6E769208C678B002F7332 /* TowersGameController.swift in Sources */,
 				C32763A2208BBEC500C9F365 /* AppDelegate.swift in Sources */,
-				C32763D4208BC66F00C9F365 /* ViewControllerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
