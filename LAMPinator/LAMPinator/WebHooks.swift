@@ -15,7 +15,7 @@ public class WebHooks {
     }
     
     //converts a dictionary to a json string
-    private static func dictToJson(data:[String:Any]) -> String? {
+    static func dictToJson(data:[String:Any]) -> String? {
         if let json = try? JSONSerialization.data(withJSONObject: data, options: .prettyPrinted) {
             let jsonString = String(data:json, encoding: .utf8)
             return jsonString
@@ -24,7 +24,7 @@ public class WebHooks {
         }
     }
 	
-	private static func formLoginRequest(data : String, action : Actions) -> URLRequest {
+    static func formRequest(data : String, action : Actions) -> URLRequest {
         //build up the request
         let url = URL(string: "http://crwl.a2hosted.com/webHooks/iosDemo.php")!
         var request = URLRequest(url:url)

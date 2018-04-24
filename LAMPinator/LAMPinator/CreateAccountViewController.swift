@@ -22,12 +22,60 @@ class CreateAccountViewController: UIViewController
     
     @IBAction func createClicked(_ sender: UIBarButtonItem)
     {
-        //do stuff todo lol jk
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd"
+        let dateString = df.string(from: dobPicker.date)
+        
+        let logindata : [String : Any] = [
+            "username":usernameField.text!,
+            "password":passwordField.text!,
+            "firstName":firstNameField.text!,
+            "lastName":lastNameField.text!,
+            "email":emailField.text!,
+            "DOB":dateString
+        ]
+        
+        let jsondata = WebHooks.dictToJson(data: logindata)
+        let request = WebHooks.formRequest(data: jsondata!, action: .createAccount)
+        WebHooks.sendRequest(request: request) { (data) in
+            if let _ = data["SUCCESS"] as? String
+            {
+                OperationQueue.main.addOperation
+                    {
+                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home")
+                        self.present(vc, animated:true, completion:nil)
+                }
+
+            }
+            else if let fail = data["ERROR"] as? String
+            {
+                if fail.elementsEqual("Username taken.")
+                {
+                    
+                }
+                
+                print(fail)
+                print(data["DEBUG"] as! String)
+                //yo it failed
+            }
+        }
+        
+        
+
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        /*
+         async stuff
+         OperationQueue.main.addOperation {
+         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "createItinerary")
+         self.present(vc, animated:true, completion:nil)
+         }
+
+        */
 
         createButton.isEnabled = false
         
@@ -73,14 +121,15 @@ class CreateAccountViewController: UIViewController
 
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
 }

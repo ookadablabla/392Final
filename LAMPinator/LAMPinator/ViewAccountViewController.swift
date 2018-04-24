@@ -8,11 +8,26 @@
 
 import UIKit
 
-class ViewAccountViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewAccountViewController: UIViewController
+{
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var dobLabel: UILabel!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
+        usernameLabel.text = User.loggedIn.username
+        passwordLabel.text = User.loggedIn.password
+        firstNameLabel.text = User.loggedIn.firstName
+        lastNameLabel.text = User.loggedIn.lastName
+        emailLabel.text = User.loggedIn.email
+        dobLabel.text = User.loggedIn.dob
+        
         // Do any additional setup after loading the view.
     }
 
