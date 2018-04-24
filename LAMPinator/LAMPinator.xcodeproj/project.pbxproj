@@ -15,6 +15,7 @@
 		78FBAA29208FBC83000FD863 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FBAA28208FBC83000FD863 /* CreateAccountViewController.swift */; };
 		78FBAA2B208FBC98000FD863 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FBAA2A208FBC98000FD863 /* LoginViewController.swift */; };
 		78FBAA2D208FBCA9000FD863 /* ViewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FBAA2C208FBCA9000FD863 /* ViewAccountViewController.swift */; };
+		78FBAA2F208FC1FA000FD863 /* WebHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FBAA2E208FC1FA000FD863 /* WebHooks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		78FBAA28208FBC83000FD863 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		78FBAA2A208FBC98000FD863 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		78FBAA2C208FBCA9000FD863 /* ViewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAccountViewController.swift; sourceTree = "<group>"; };
+		78FBAA2E208FC1FA000FD863 /* WebHooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebHooks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		78FBAA15208FB76C000FD863 /* LAMPinator */ = {
 			isa = PBXGroup;
 			children = (
+				78FBAA2E208FC1FA000FD863 /* WebHooks.swift */,
 				78FBAA16208FB76C000FD863 /* AppDelegate.swift */,
 				78FBAA18208FB76C000FD863 /* ViewController.swift */,
 				78FBAA1A208FB76C000FD863 /* Main.storyboard */,
@@ -147,6 +150,7 @@
 				78FBAA2B208FBC98000FD863 /* LoginViewController.swift in Sources */,
 				78FBAA29208FBC83000FD863 /* CreateAccountViewController.swift in Sources */,
 				78FBAA2D208FBCA9000FD863 /* ViewAccountViewController.swift in Sources */,
+				78FBAA2F208FC1FA000FD863 /* WebHooks.swift in Sources */,
 				78FBAA19208FB76C000FD863 /* ViewController.swift in Sources */,
 				78FBAA17208FB76C000FD863 /* AppDelegate.swift in Sources */,
 			);
