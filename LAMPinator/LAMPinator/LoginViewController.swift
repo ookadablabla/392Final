@@ -90,9 +90,10 @@ class LoginViewController: UIViewController
     {
         super.viewDidLoad()
         
+        loginButton.isEnabled = false
+        
         usernameField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-
 
         spinner.isHidden = true
         loginButton.isHidden = false
