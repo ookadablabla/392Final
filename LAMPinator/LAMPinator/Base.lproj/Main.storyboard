@@ -47,7 +47,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="j2y-ru-vDE"/>
+                                    <navigationItem id="j2y-ru-vDE"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -57,11 +57,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="10" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="hku-Ff-ua4">
             <objects>
-                <viewController id="fqv-ew-YQx" sceneMemberID="viewController">
+                <viewController id="fqv-ew-YQx" customClass="LoginViewController" customModule="LAMPinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Dp-9y-C23">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +72,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Login" id="rm8-7n-bcg">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="a7d-uD-Idy"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="a7d-uD-Idy">
+                                            <connections>
+                                                <action selector="backClicked:" destination="fqv-ew-YQx" id="gN5-8U-FJO"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -108,26 +113,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="loginClicked:" destination="fqv-ew-YQx" eventType="touchUpInside" id="7vv-dk-NBi"/>
                                     <segue destination="k5b-yZ-9FW" kind="presentation" id="KE2-gY-mMZ"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rXP-RU-WhP">
-                                <rect key="frame" x="177" y="227" width="20" height="20"/>
+                                <rect key="frame" x="178" y="228" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3tW-di-Ts0"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="fUC-NZ-6II" id="GrH-hi-m5I"/>
+                        <outlet property="passwordField" destination="yQH-3G-t3x" id="fXk-xP-Uyf"/>
+                        <outlet property="spinner" destination="rXP-RU-WhP" id="BSi-Jx-fgW"/>
+                        <outlet property="usernameField" destination="9fr-TW-i0t" id="Kfg-4r-VB6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mg-nn-NJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="427.73613193403304"/>
         </scene>
-        <!--View Controller-->
+        <!--View Account View Controller-->
         <scene sceneID="gxb-Nm-y7g">
             <objects>
-                <viewController id="k5b-yZ-9FW" sceneMemberID="viewController">
+                <viewController id="k5b-yZ-9FW" customClass="ViewAccountViewController" customModule="LAMPinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="thQ-t9-9EI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="2029.5999999999999" y="427.73613193403304"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="L7K-EI-Tkf">
             <objects>
-                <viewController id="8jc-9S-4wd" sceneMemberID="viewController">
+                <viewController id="8jc-9S-4wd" customClass="CreateAccountViewController" customModule="LAMPinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rr8-2y-pSh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +259,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Create Account" id="weF-0P-Qqv">
-                                        <barButtonItem key="rightBarButtonItem" title="Create" id="BLU-8U-p8l"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Create" id="BLU-8U-p8l">
+                                            <connections>
+                                                <action selector="createClicked:" destination="8jc-9S-4wd" id="a2I-Sq-pjz"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -339,6 +355,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iUD-1a-eO3"/>
                     </view>
+                    <connections>
+                        <outlet property="createButton" destination="BLU-8U-p8l" id="Qsg-tR-UZd"/>
+                        <outlet property="dobPicker" destination="3kJ-lm-j0p" id="l8m-lk-HW7"/>
+                        <outlet property="emailField" destination="IVd-Ey-iEJ" id="C49-uy-bCc"/>
+                        <outlet property="firstNameField" destination="O4V-ZX-MRi" id="yFN-xd-PcF"/>
+                        <outlet property="lastNameField" destination="lHH-bk-dkh" id="F1R-po-mxO"/>
+                        <outlet property="passwordField" destination="8Rb-TR-BgD" id="ENe-bu-DFn"/>
+                        <outlet property="usernameField" destination="7lp-UH-vCW" id="a1b-1J-bby"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5n8-qv-ly0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
