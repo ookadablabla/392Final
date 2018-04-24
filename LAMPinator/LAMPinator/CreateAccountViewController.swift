@@ -41,11 +41,10 @@ class CreateAccountViewController: UIViewController
             if let _ = data["SUCCESS"] as? String
             {
                 OperationQueue.main.addOperation
-                    {
-                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home")
-                        self.present(vc, animated:true, completion:nil)
+                {
+                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home")
+                    self.present(vc, animated:true, completion:nil)
                 }
-
             }
             else if let fail = data["ERROR"] as? String
             {
@@ -55,28 +54,14 @@ class CreateAccountViewController: UIViewController
                 }
                 
                 print(fail)
-                print(data["DEBUG"] as! String)
-                //yo it failed
             }
         }
-        
-        
-
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        /*
-         async stuff
-         OperationQueue.main.addOperation {
-         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "createItinerary")
-         self.present(vc, animated:true, completion:nil)
-         }
-
-        */
-
         createButton.isEnabled = false
         
         usernameField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
@@ -84,8 +69,6 @@ class CreateAccountViewController: UIViewController
         firstNameField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         lastNameField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         emailField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning()
@@ -121,7 +104,7 @@ class CreateAccountViewController: UIViewController
 
     
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -130,6 +113,6 @@ class CreateAccountViewController: UIViewController
         // Pass the selected object to the new view controller.
         
     }
-    
-
+    */
+ 
 }
