@@ -18,10 +18,14 @@ class CreateAccountViewController: UIViewController
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var dobPicker: UIDatePicker!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     @IBOutlet weak var createButton: UIBarButtonItem!
     
     @IBAction func createClicked(_ sender: UIBarButtonItem)
     {
+        spinner.isHidden = false
+        spinner.startAnimating()
         let df = DateFormatter()
         df.dateFormat = "yyyy-MM-dd"
         let dateString = df.string(from: dobPicker.date)
@@ -48,12 +52,23 @@ class CreateAccountViewController: UIViewController
             }
             else if let fail = data["ERROR"] as? String
             {
-                if fail.elementsEqual("Username taken.")
+                OperationQueue.main.addOperation
                 {
+                    if fail.elementsEqual("Username taken.")
+                    {
+                        let alert = UIAlertController(title: "Username Taken", message: "Please select a new username", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                        self.spinner.stopAnimating()
+                        self.spinner.isHidden = true
+                        self.present(alert, animated: true)
+                    }
                     
+                    print(fail)
+
+
                 }
                 
-                print(fail)
             }
         }
     }
@@ -63,6 +78,7 @@ class CreateAccountViewController: UIViewController
         super.viewDidLoad()
         
         createButton.isEnabled = false
+        spinner.isHidden = true
         
         usernameField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
