@@ -75,7 +75,6 @@
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="a7d-uD-Idy">
                                             <connections>
                                                 <action selector="backClicked:" destination="fqv-ew-YQx" id="gN5-8U-FJO"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="knS-pS-Zbh"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -393,7 +392,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ou4-i5-Vy0"/>
-        <segue reference="XrW-nE-Y5k"/>
+        <segue reference="d9C-XO-WZa"/>
     </inferredMetricsTieBreakers>
 </document>

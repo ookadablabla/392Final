@@ -18,7 +18,7 @@ class LoginViewController: UIViewController
 
     @IBAction func backClicked(_ sender: UIBarButtonItem)
     {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func loginClicked(_ sender: UIButton)
