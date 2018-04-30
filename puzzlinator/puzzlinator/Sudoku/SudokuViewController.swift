@@ -480,6 +480,11 @@ class SudokuViewController: UIViewController {
         sqr87.addGestureRecognizer(tap87)
         sqr88.addGestureRecognizer(tap88)
         
+        for sqr in allSquares
+        {
+            sqr.text = String(sqr.tag)
+        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -529,11 +534,6 @@ class SudokuViewController: UIViewController {
     @IBAction func nineClicked(_ sender: UIButton) {
         allSquares[self.selectedSquareIndex].text = "9"
     }
-
-
-    
-    
-    
     
     func fillPuzzle(numbers : [Int])
     {
