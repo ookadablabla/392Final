@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //dgaf about date
     
     override func viewDidLoad() {
         super.viewDidLoad()
