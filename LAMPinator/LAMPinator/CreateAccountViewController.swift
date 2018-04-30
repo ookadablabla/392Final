@@ -115,6 +115,9 @@ class CreateAccountViewController: UIViewController
         createButton.isEnabled = true
     }
 
+    @IBAction func cancelClicked(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 
     /*

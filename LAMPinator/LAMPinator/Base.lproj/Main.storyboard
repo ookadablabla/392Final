@@ -185,7 +185,7 @@
                                     <navigationItem title="View Account" id="C5e-gs-Waa">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="dGo-UE-iBJ">
                                             <connections>
-                                                <segue destination="fqv-ew-YQx" kind="presentation" id="Ou4-i5-Vy0"/>
+                                                <action selector="doneClicked:" destination="k5b-yZ-9FW" id="06v-Tc-bhk"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -272,7 +272,7 @@
                                     <navigationItem title="Create Account" id="weF-0P-Qqv">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="RhS-MI-GZR">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="XrW-nE-Y5k"/>
+                                                <action selector="cancelClicked:" destination="8jc-9S-4wd" id="MrG-B3-YVS"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Create" id="BLU-8U-p8l">
@@ -391,7 +391,4 @@
             <point key="canvasLocation" x="1072.8" y="-331.48425787106447"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="d9C-XO-WZa"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -48,6 +48,9 @@ class LoginViewController: UIViewController
                 User.loggedIn = User.fromDictionary(data);
                 
                 OperationQueue.main.addOperation {
+                    self.spinner.stopAnimating()
+                    self.spinner.isHidden = true
+                    self.loginButton.isHidden = false
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewAccount")
                     self.present(vc, animated:true, completion:nil)
                 }
