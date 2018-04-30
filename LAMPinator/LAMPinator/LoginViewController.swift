@@ -18,7 +18,7 @@ class LoginViewController: UIViewController
 
     @IBAction func backClicked(_ sender: UIBarButtonItem)
     {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func loginClicked(_ sender: UIButton)
@@ -48,6 +48,9 @@ class LoginViewController: UIViewController
                 User.loggedIn = User.fromDictionary(data);
                 
                 OperationQueue.main.addOperation {
+                    self.spinner.stopAnimating()
+                    self.spinner.isHidden = true
+                    self.loginButton.isHidden = false
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewAccount")
                     self.present(vc, animated:true, completion:nil)
                 }
@@ -56,10 +59,29 @@ class LoginViewController: UIViewController
             } else if let error = data["ERROR"] as? String {
                 print(error)
                 
-                if error.elementsEqual(loginError.invalidUsername.rawValue) {
-                    //popup thing
-                } else if error.elementsEqual(loginError.invalidPassword.rawValue) {
-                    
+                if error.elementsEqual(loginError.invalidUsername.rawValue)
+                {
+                    OperationQueue.main.addOperation
+                    {
+                        let alert = UIAlertController(title: "Invalid Username", message: "This username does not exist", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                        self.spinner.stopAnimating()
+                        self.spinner.isHidden = true
+                        self.loginButton.isHidden = false
+                        self.present(alert, animated: true)
+                    }
+                }
+                else if error.elementsEqual(loginError.invalidPassword.rawValue)
+                {
+                    OperationQueue.main.addOperation
+                    {
+                        let alert = UIAlertController(title: "Invalid Password", message: "This password is incorrect", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                        self.spinner.stopAnimating()
+                        self.spinner.isHidden = true
+                        self.loginButton.isHidden = false
+                        self.present(alert, animated: true)
+                    }
                 }
             }
         }	
