@@ -30,6 +30,7 @@ class CreateAccountViewController: UIViewController
         df.dateFormat = "yyyy-MM-dd"
         let dateString = df.string(from: dobPicker.date)
         
+        //put data into dictionary form
         let logindata : [String : Any] = [
             "username":usernameField.text!,
             "password":passwordField.text!,
@@ -39,19 +40,27 @@ class CreateAccountViewController: UIViewController
             "DOB":dateString
         ]
         
+        //convert dictionary to json
         let jsondata = WebHooks.dictToJson(data: logindata)
+        
+        //begin forming request
         let request = WebHooks.formRequest(data: jsondata!, action: .createAccount)
+        
+        //attempt to send request
         WebHooks.sendRequest(request: request) { (data) in
+            //if server successfully created account
             if let _ = data["SUCCESS"] as? String
             {
+                //wait for call stack to finish
                 OperationQueue.main.addOperation
                 {
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home")
                     self.present(vc, animated:true, completion:nil)
                 }
-            }
+            }//if there is an error creating an account
             else if let fail = data["ERROR"] as? String
             {
+                //wait for call stack to finish
                 OperationQueue.main.addOperation
                 {
                     if fail.elementsEqual("Username taken.")

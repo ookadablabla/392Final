@@ -59,10 +59,29 @@ class LoginViewController: UIViewController
             } else if let error = data["ERROR"] as? String {
                 print(error)
                 
-                if error.elementsEqual(loginError.invalidUsername.rawValue) {
-                    //popup thing
-                } else if error.elementsEqual(loginError.invalidPassword.rawValue) {
-                    
+                if error.elementsEqual(loginError.invalidUsername.rawValue)
+                {
+                    OperationQueue.main.addOperation
+                    {
+                        let alert = UIAlertController(title: "Invalid Username", message: "This username does not exist", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                        self.spinner.stopAnimating()
+                        self.spinner.isHidden = true
+                        self.loginButton.isHidden = false
+                        self.present(alert, animated: true)
+                    }
+                }
+                else if error.elementsEqual(loginError.invalidPassword.rawValue)
+                {
+                    OperationQueue.main.addOperation
+                    {
+                        let alert = UIAlertController(title: "Invalid Password", message: "This password is incorrect", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                        self.spinner.stopAnimating()
+                        self.spinner.isHidden = true
+                        self.loginButton.isHidden = false
+                        self.present(alert, animated: true)
+                    }
                 }
             }
         }
