@@ -65,10 +65,7 @@ class CreateAccountViewController: UIViewController
                     }
                     
                     print(fail)
-
-
                 }
-                
             }
         }
     }
