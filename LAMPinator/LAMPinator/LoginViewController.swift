@@ -27,63 +27,47 @@ class LoginViewController: UIViewController
         spinner.isHidden = false
         spinner.startAnimating()
         
+        //grab the login data
         let logindata : [String : Any] = [
             "username":usernameField.text!,
             "password":passwordField.text!
         ]
+        
+        //convert the login data to JSON format
         let jsondata = WebHooks.dictToJson(data: logindata)
+        
+        //form the request with the JSON data appended
         let request = WebHooks.formRequest(data: jsondata!, action: .login)
+        
+        //send the request
         WebHooks.sendRequest(request: request) { (data) in
-            if let success = data["SUCCESS"] as? String
-            {
-                if let username = data["USERNAME"] as? String
-                {
-                    User.loggedIn.username = username
-                }
-                if let password = data["PASSWORD"] as? String
-                {
-                    User.loggedIn.password = password
-                }
-                if let firstname = data["FIRSTNAME"] as? String
-                {
-                    User.loggedIn.firstName = firstname
-                }
-                if let lastname = data["LASTNAME"] as? String
-                {
-                    User.loggedIn.lastName = lastname
-                }
-                if let email = data["EMAIL"] as? String
-                {
-                    User.loggedIn.email = email
-                }
-                if let dob = data["DOB"] as? String
-                {
-                    User.loggedIn.dob = dob
-                }
+            
+            //if we received successful login from the server
+            if let _ = data["SUCCESS"] as? String {
+
+                User.loggedIn = User.fromDictionary(data);
                 
-                OperationQueue.main.addOperation
-                {
+                OperationQueue.main.addOperation {
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewAccount")
                     self.present(vc, animated:true, completion:nil)
                 }
-            }
-            else if let fail = data["ERROR"] as? String
-            {
-                if fail.elementsEqual("Invalid Username.")
-                {
+                
+            //if we received an error from the server
+            } else if let error = data["ERROR"] as? String {
+                print(error)
+                
+                if error.elementsEqual(loginError.invalidUsername.rawValue) {
                     //popup thing
-                }
-                else if fail.elementsEqual("Invalid Password.")
-                {
+                } else if error.elementsEqual(loginError.invalidPassword.rawValue) {
                     
                 }
-                
-                print(fail)
-                //print(data["DEBUG"] as! String)
             }
         }
-
-        //todo
+    }
+    
+    enum loginError : String {
+        case invalidPassword = "Invalid Password."
+        case invalidUsername = "Invalid Username."
     }
     
     override func viewDidLoad()
