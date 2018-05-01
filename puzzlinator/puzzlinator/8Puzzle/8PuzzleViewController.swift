@@ -177,12 +177,24 @@ class _PuzzleViewController: UIViewController
         }
     }
     
+    func canShift(label : UILabel) -> Bool
+    {
+        if (label.center.x == blankLabel.center.x && abs(label.center.y-blankLabel.center.y) < 200) ||
+            (label.center.y == blankLabel.center.y && abs(label.center.x-blankLabel.center.x) < 200)
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+    
     
     @objc func switch1(sender:UITapGestureRecognizer)
     {
         print("tap working1")
-        if (oneLabel.center.x == blankLabel.center.x && abs(oneLabel.center.y-blankLabel.center.y) < 200) ||
-            (oneLabel.center.y == blankLabel.center.y && abs(oneLabel.center.x-blankLabel.center.x) < 200)
+        if canShift(label: oneLabel)
         {
             swapTile(tile: oneLabel)
             checkForWin()
@@ -192,8 +204,7 @@ class _PuzzleViewController: UIViewController
     @objc func switch2(sender:UITapGestureRecognizer)
     {
         print("tap working2")
-        if (twoLabel.center.x == blankLabel.center.x && abs(twoLabel.center.y-blankLabel.center.y) < 200) ||
-            (twoLabel.center.y == blankLabel.center.y && abs(twoLabel.center.x-blankLabel.center.x) < 200)
+        if canShift(label: twoLabel)
         {
             swapTile(tile: twoLabel)
             checkForWin()
@@ -203,8 +214,7 @@ class _PuzzleViewController: UIViewController
     @objc func switch3(sender:UITapGestureRecognizer)
     {
         print("tap working3")
-        if (threeLabel.center.x == blankLabel.center.x && abs(threeLabel.center.y-blankLabel.center.y) < 200) ||
-            (threeLabel.center.y == blankLabel.center.y && abs(threeLabel.center.x-blankLabel.center.x) < 200)
+        if canShift(label: threeLabel)
         {
             swapTile(tile: threeLabel)
             checkForWin()
@@ -214,8 +224,7 @@ class _PuzzleViewController: UIViewController
     @objc func switch4(sender:UITapGestureRecognizer)
     {
         print("tap working4")
-        if (fourLabel.center.x == blankLabel.center.x && abs(fourLabel.center.y-blankLabel.center.y) < 200) ||
-            (fourLabel.center.y == blankLabel.center.y && abs(fourLabel.center.x-blankLabel.center.x) < 200)
+        if canShift(label: fourLabel)
         {
             swapTile(tile: fourLabel)
             checkForWin()
@@ -225,8 +234,7 @@ class _PuzzleViewController: UIViewController
     @objc func switch5(sender:UITapGestureRecognizer)
     {
         print("tap working5")
-        if (fiveLabel.center.x == blankLabel.center.x && abs(fiveLabel.center.y-blankLabel.center.y) < 200) ||
-            (fiveLabel.center.y == blankLabel.center.y && abs(fiveLabel.center.x-blankLabel.center.x) < 200)
+        if canShift(label: fiveLabel)
         {
             swapTile(tile: fiveLabel)
             checkForWin()
@@ -236,8 +244,7 @@ class _PuzzleViewController: UIViewController
     @objc func switch6(sender:UITapGestureRecognizer)
     {
         print("tap working6")
-        if (sixLabel.center.x == blankLabel.center.x && abs(sixLabel.center.y-blankLabel.center.y) < 200) ||
-            (sixLabel.center.y == blankLabel.center.y && abs(sixLabel.center.x-blankLabel.center.x) < 200)
+        if canShift(label: sixLabel)
         {
             swapTile(tile: sixLabel)
             checkForWin()
@@ -247,8 +254,7 @@ class _PuzzleViewController: UIViewController
     @objc func switch7(sender:UITapGestureRecognizer)
     {
         print("tap working7")
-        if (sevenLabel.center.x == blankLabel.center.x && abs(sevenLabel.center.y-blankLabel.center.y) < 200) ||
-            (sevenLabel.center.y == blankLabel.center.y && abs(sevenLabel.center.x-blankLabel.center.x) < 200)
+        if canShift(label: sevenLabel)
         {
             swapTile(tile: sevenLabel)
             checkForWin()
@@ -258,8 +264,7 @@ class _PuzzleViewController: UIViewController
     @objc func switch8(sender:UITapGestureRecognizer)
     {
         print("tap working8")
-        if (eightLabel.center.x == blankLabel.center.x && abs(eightLabel.center.y-blankLabel.center.y) < 200) ||
-            (eightLabel.center.y == blankLabel.center.y && abs(eightLabel.center.x-blankLabel.center.x) < 200)
+        if canShift(label: eightLabel)
         {
             swapTile(tile: eightLabel)
             checkForWin()
