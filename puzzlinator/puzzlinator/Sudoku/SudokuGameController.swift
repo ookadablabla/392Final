@@ -8,61 +8,11 @@
 
 import Foundation
 
-extension String {
-    subscript (i: Int) -> Character {
-        return self[index(startIndex, offsetBy: i)]
-    }
-    subscript (bounds: CountableRange<Int>) -> Substring {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[start ..< end]
-    }
-    subscript (bounds: CountableClosedRange<Int>) -> Substring {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[start ... end]
-    }
-    subscript (bounds: CountablePartialRangeFrom<Int>) -> Substring {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(endIndex, offsetBy: -1)
-        return self[start ... end]
-    }
-    subscript (bounds: PartialRangeThrough<Int>) -> Substring {
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[startIndex ... end]
-    }
-    subscript (bounds: PartialRangeUpTo<Int>) -> Substring {
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[startIndex ..< end]
-    }
-}
+
 
 class SudokuGame
 {
     var numbers : [Int] = []
-    
-    private func transpose<T>(_ vals : [T]) -> [T]{
-        var ret = vals
-        ret.swapAt(1, 5)
-        ret.swapAt(2, 10)
-        ret.swapAt(3, 15)
-        ret.swapAt(4, 20)
-        ret.swapAt(7, 11)
-        ret.swapAt(8, 16)
-        ret.swapAt(9, 21)
-        ret.swapAt(13, 17)
-        ret.swapAt(14, 22)
-        ret.swapAt(19, 23)
-        return ret
-    }
-    
-    private func rotate<T>(_ a : [T]) -> [T] {
-        return [a[20], a[15], a[10], a[5], a[0],
-                a[21], a[16], a[11], a[6], a[1],
-                a[22], a[17], a[12], a[7], a[2],
-                a[23], a[18], a[13], a[8], a[3],
-                a[24], a[19], a[14], a[9], a[4]]
-    }
     
     /*
      unsolved:
@@ -95,7 +45,7 @@ class SudokuGame
     let seedSolved = "935816274416927583287534916169378452378245691524691837791482365852163749643759128"
     let seedUnsolved = "900006200400000500080500010100008050070205090020600007090002060002000009003700008"
 
-    private func randomPuzzle() -> String
+    func randomPuzzle() -> [String]
     {
         var randomSolved = seedSolved
         var randomUnsolved = seedUnsolved
@@ -182,9 +132,10 @@ class SudokuGame
         randomUnsolved = randomUnsolved.replacingOccurrences(of: "h", with: newPairs["h"]!)
         randomUnsolved = randomUnsolved.replacingOccurrences(of: "i", with: newPairs["i"]!)
         
-        return ""
+        return [randomSolved, randomUnsolved]
     }
     
+    //todo?
     private func rotate(degrees deg : Int, square sqr : String) -> String
     {
         var ret = ""
@@ -195,6 +146,7 @@ class SudokuGame
         }
         else if deg == 1 //90
         {
+            /*
             ret.append(sqr[72])
             ret.append(sqr[63])
             ret.append(sqr[54])
@@ -204,7 +156,7 @@ class SudokuGame
             ret.append(sqr[18])
             ret.append(sqr[9])
             ret.append(sqr[0])
-            
+            */
             return ret
         }
         else if deg == 2 //180
@@ -223,4 +175,33 @@ class SudokuGame
         }
     }
 
+}
+
+extension String {
+    subscript (i: Int) -> Character {
+        return self[index(startIndex, offsetBy: i)]
+    }
+    subscript (bounds: CountableRange<Int>) -> Substring {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return self[start ..< end]
+    }
+    subscript (bounds: CountableClosedRange<Int>) -> Substring {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return self[start ... end]
+    }
+    subscript (bounds: CountablePartialRangeFrom<Int>) -> Substring {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(endIndex, offsetBy: -1)
+        return self[start ... end]
+    }
+    subscript (bounds: PartialRangeThrough<Int>) -> Substring {
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return self[startIndex ... end]
+    }
+    subscript (bounds: PartialRangeUpTo<Int>) -> Substring {
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return self[startIndex ..< end]
+    }
 }

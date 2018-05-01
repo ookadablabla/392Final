@@ -8,8 +8,13 @@
 
 import UIKit
 
-class SudokuViewController: UIViewController {
+class SudokuViewController: UIViewController
+{
 
+    var game : SudokuGame = SudokuGame()
+    var unsolved : String = ""
+    var solved : String = ""
+    
     @IBOutlet weak var sqr00: UILabel!
     @IBOutlet weak var sqr01: UILabel!
     @IBOutlet weak var sqr02: UILabel!
@@ -485,6 +490,12 @@ class SudokuViewController: UIViewController {
             sqr.text = String(sqr.tag)
         }
         
+        let games = game.randomPuzzle()
+        solved = games[0]
+        unsolved = games[1]
+        
+        fillPuzzle(numbers: unsolved)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -535,11 +546,46 @@ class SudokuViewController: UIViewController {
         allSquares[self.selectedSquareIndex].text = "9"
     }
     
-    func fillPuzzle(numbers : [Int])
+    @IBAction func newGameClicked(_ sender: UIButton)
     {
-        for (index, sqr) in allSquares.enumerated()
+        let games = game.randomPuzzle()
+        solved = games[0]
+        unsolved = games[1]
+        
+        fillPuzzle(numbers: unsolved)
+    }
+    
+    @IBAction func checkSolutionClicked(_ sender: UIButton) {
+        for (sqrIndex, sqr) in allSquares.enumerated()
         {
-            sqr.text = String(numbers[index])
+            if sqr.text! != ""
+            {
+                if sqr.text! != String(solved[sqrIndex])
+                {
+                    sqr.backgroundColor = UIColor.red
+                }
+                else
+                {
+                    sqr.backgroundColor = UIColor.green
+                }
+            }
+        }
+    }
+    
+    func fillPuzzle(numbers : String)
+    {
+        for (sqrIndex, sqr) in allSquares.enumerated()
+        {
+            print("square: \(sqrIndex), char: \(numbers[sqrIndex])")
+
+            if numbers[sqrIndex] == "0"
+            {
+                sqr.text = ""
+            }
+            else
+            {
+                sqr.text = String(numbers[sqrIndex])
+            }
         }
     }
     
@@ -550,6 +596,11 @@ class SudokuViewController: UIViewController {
             sqr.backgroundColor = background
         }
     }
+    
+    @IBAction func doneClicked(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     
 
