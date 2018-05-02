@@ -11,7 +11,6 @@
 		78071703208E2AD100C46BC4 /* SudokuGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78071702208E2AD100C46BC4 /* SudokuGameController.swift */; };
 		78071705208E2AE700C46BC4 /* SudokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78071704208E2AE700C46BC4 /* SudokuViewController.swift */; };
 		788778582097F25500F78DDB /* 8PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788778572097F25500F78DDB /* 8PuzzleViewController.swift */; };
-		7887785C2097F27300F78DDB /* 8PuzzleGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887785B2097F27300F78DDB /* 8PuzzleGameController.swift */; };
 		C31736052096ACE800C97273 /* TentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31736042096ACE800C97273 /* TentsViewController.swift */; };
 		C31736072096AEB900C97273 /* TentsGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31736062096AEB900C97273 /* TentsGameController.swift */; };
 		C32763A2208BBEC500C9F365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763A1208BBEC500C9F365 /* AppDelegate.swift */; };
@@ -46,7 +45,6 @@
 		78071702208E2AD100C46BC4 /* SudokuGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGameController.swift; sourceTree = "<group>"; };
 		78071704208E2AE700C46BC4 /* SudokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuViewController.swift; sourceTree = "<group>"; };
 		788778572097F25500F78DDB /* 8PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8PuzzleViewController.swift; sourceTree = "<group>"; };
-		7887785B2097F27300F78DDB /* 8PuzzleGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8PuzzleGameController.swift; sourceTree = "<group>"; };
 		C31736042096ACE800C97273 /* TentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentsViewController.swift; sourceTree = "<group>"; };
 		C31736062096AEB900C97273 /* TentsGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentsGameController.swift; sourceTree = "<group>"; };
 		C327639E208BBEC500C9F365 /* puzzlinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = puzzlinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				788778572097F25500F78DDB /* 8PuzzleViewController.swift */,
-				7887785B2097F27300F78DDB /* 8PuzzleGameController.swift */,
 			);
 			path = 8Puzzle;
 			sourceTree = "<group>";
@@ -315,7 +312,6 @@
 				C31736052096ACE800C97273 /* TentsViewController.swift in Sources */,
 				78071705208E2AE700C46BC4 /* SudokuViewController.swift in Sources */,
 				78071700208E295500C46BC4 /* TableViewCellViewController.swift in Sources */,
-				7887785C2097F27300F78DDB /* 8PuzzleGameController.swift in Sources */,
 				C31736072096AEB900C97273 /* TentsGameController.swift in Sources */,
 				C3E6E767208C665D002F7332 /* TowersViewController.swift in Sources */,
 				C32763A4208BBEC500C9F365 /* ViewController.swift in Sources */,
