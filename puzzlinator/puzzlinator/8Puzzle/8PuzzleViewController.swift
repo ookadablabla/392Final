@@ -102,8 +102,6 @@ class _PuzzleViewController: UIViewController
         sevenLabel.addGestureRecognizer(tap7)
         eightLabel.addGestureRecognizer(tap8)
 
-        
-
         randomizeGame()
     }
     
@@ -146,9 +144,11 @@ class _PuzzleViewController: UIViewController
     
     func swapTile(tile : UILabel)
     {
-        let temp : CGPoint = tile.center
-        tile.center = blankLabel.center
-        blankLabel.center = temp
+        UIView.animate(withDuration: 1, delay: 0, animations: {
+            let temp : CGPoint = tile.center
+            tile.center = self.blankLabel.center
+            self.blankLabel.center = temp
+            }, completion: nil)
     }
     
     func checkForWin()
