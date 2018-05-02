@@ -576,8 +576,6 @@ class SudokuViewController: UIViewController
     {
         for (sqrIndex, sqr) in allSquares.enumerated()
         {
-            print("square: \(sqrIndex), char: \(numbers[sqrIndex])")
-
             if numbers[sqrIndex] == "0"
             {
                 sqr.text = ""
@@ -597,12 +595,10 @@ class SudokuViewController: UIViewController
         }
     }
     
-    @IBAction func doneClicked(_ sender: UIBarButtonItem) {
+    @IBAction func doneClicked(_ sender: UIBarButtonItem)
+    {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
 
     /*
     // MARK: - Navigation
