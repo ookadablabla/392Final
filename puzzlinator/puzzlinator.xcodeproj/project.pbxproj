@@ -13,6 +13,8 @@
 		788778582097F25500F78DDB /* 8PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788778572097F25500F78DDB /* 8PuzzleViewController.swift */; };
 		78DB65DC209B7BCF006A2F85 /* SudokuHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB65DB209B7BCF006A2F85 /* SudokuHelpViewController.swift */; };
 		78DB65DE209B7F5A006A2F85 /* 8PuzzleHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB65DD209B7F5A006A2F85 /* 8PuzzleHelpViewController.swift */; };
+		78DB65E0209B8080006A2F85 /* TentsHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB65DF209B8080006A2F85 /* TentsHelpViewController.swift */; };
+		78DB65E2209B808F006A2F85 /* TowersHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB65E1209B808F006A2F85 /* TowersHelpViewController.swift */; };
 		C31736052096ACE800C97273 /* TentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31736042096ACE800C97273 /* TentsViewController.swift */; };
 		C31736072096AEB900C97273 /* TentsGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31736062096AEB900C97273 /* TentsGameController.swift */; };
 		C32763A2208BBEC500C9F365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763A1208BBEC500C9F365 /* AppDelegate.swift */; };
@@ -49,6 +51,8 @@
 		788778572097F25500F78DDB /* 8PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8PuzzleViewController.swift; sourceTree = "<group>"; };
 		78DB65DB209B7BCF006A2F85 /* SudokuHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuHelpViewController.swift; sourceTree = "<group>"; };
 		78DB65DD209B7F5A006A2F85 /* 8PuzzleHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8PuzzleHelpViewController.swift; sourceTree = "<group>"; };
+		78DB65DF209B8080006A2F85 /* TentsHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentsHelpViewController.swift; sourceTree = "<group>"; };
+		78DB65E1209B808F006A2F85 /* TowersHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowersHelpViewController.swift; sourceTree = "<group>"; };
 		C31736042096ACE800C97273 /* TentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentsViewController.swift; sourceTree = "<group>"; };
 		C31736062096AEB900C97273 /* TentsGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentsGameController.swift; sourceTree = "<group>"; };
 		C327639E208BBEC500C9F365 /* puzzlinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = puzzlinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,7 @@
 			children = (
 				C31736042096ACE800C97273 /* TentsViewController.swift */,
 				C31736062096AEB900C97273 /* TentsGameController.swift */,
+				78DB65DF209B8080006A2F85 /* TentsHelpViewController.swift */,
 			);
 			path = Tents;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			children = (
 				C3E6E766208C665D002F7332 /* TowersViewController.swift */,
 				C3E6E768208C678B002F7332 /* TowersGameController.swift */,
+				78DB65E1209B808F006A2F85 /* TowersHelpViewController.swift */,
 			);
 			path = Towers;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78071703208E2AD100C46BC4 /* SudokuGameController.swift in Sources */,
+				78DB65E2209B808F006A2F85 /* TowersHelpViewController.swift in Sources */,
 				C31736052096ACE800C97273 /* TentsViewController.swift in Sources */,
 				78071705208E2AE700C46BC4 /* SudokuViewController.swift in Sources */,
 				78071700208E295500C46BC4 /* TableViewCellViewController.swift in Sources */,
@@ -322,6 +329,7 @@
 				C31736072096AEB900C97273 /* TentsGameController.swift in Sources */,
 				C3E6E767208C665D002F7332 /* TowersViewController.swift in Sources */,
 				C32763A4208BBEC500C9F365 /* ViewController.swift in Sources */,
+				78DB65E0209B8080006A2F85 /* TentsHelpViewController.swift in Sources */,
 				788778582097F25500F78DDB /* 8PuzzleViewController.swift in Sources */,
 				C3E6E769208C678B002F7332 /* TowersGameController.swift in Sources */,
 				C32763A2208BBEC500C9F365 /* AppDelegate.swift in Sources */,
