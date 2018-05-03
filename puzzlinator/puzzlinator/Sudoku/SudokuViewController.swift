@@ -548,6 +548,11 @@ class SudokuViewController: UIViewController
     
     @IBAction func newGameClicked(_ sender: UIButton)
     {
+        newGame()
+    }
+    
+    func newGame()
+    {
         let games = game.randomPuzzle()
         solved = games[0]
         unsolved = games[1]
@@ -555,7 +560,10 @@ class SudokuViewController: UIViewController
         fillPuzzle(numbers: unsolved)
     }
     
-    @IBAction func checkSolutionClicked(_ sender: UIButton) {
+    @IBAction func checkSolutionClicked(_ sender: UIButton)
+    {
+        var winner : Bool = true
+
         for (sqrIndex, sqr) in allSquares.enumerated()
         {
             if sqr.text! != ""
@@ -563,12 +571,28 @@ class SudokuViewController: UIViewController
                 if sqr.text! != String(solved[sqrIndex])
                 {
                     sqr.backgroundColor = UIColor.red
+                    winner = false
                 }
                 else
                 {
                     sqr.backgroundColor = UIColor.green
                 }
             }
+            else
+            {
+                winner = false
+            }
+        }
+        
+        if winner
+        {
+            let alert = UIAlertController(title: "You Won!", message: "Press to start a new game.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { action in
+                self.newGame()
+            }))
+            
+            self.present(alert, animated: true)
         }
     }
     
