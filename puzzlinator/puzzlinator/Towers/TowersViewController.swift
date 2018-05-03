@@ -76,6 +76,10 @@ class TowersViewController : UIViewController {
         gameInstance!.newGame()
     }
     
+    @IBAction func checkSolutionClicked(_ sender: Any) {
+        gameInstance!.checkSolution()
+    }
+    
     @IBAction func setCurCell(_ sender: TowersCell) {
         if let oldCell = gameInstance!.curCell {
             oldCell.layer.borderWidth = 0

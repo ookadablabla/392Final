@@ -72,7 +72,16 @@ class TentsViewController : UIViewController {
     @IBOutlet weak var lc40: UILabel!
     @IBOutlet weak var lc41: UILabel!
     
+    @IBAction func newGameClicked(_ sender: Any) {
+        gameInstance!.newGame()
+    }
+    
+    @IBAction func checkSolutionClicked(_ sender: Any) {
+        gameInstance!.checkSolution()
+    }
+    
     @IBAction func setCurCell(_ sender: TentsCell) {
+        print("Button was clicked!")
         if let oldCell = gameInstance!.curCell {
             oldCell.layer.borderWidth = 0
             oldCell.layer.borderColor = UIColor.clear.cgColor
@@ -82,9 +91,20 @@ class TentsViewController : UIViewController {
         sender.layer.borderColor = UIColor.cyan.cgColor
     }
     
-    @IBAction func setValue(_ sender: UIButton) {
+    @IBAction func setTent(_ sender: UIButton) {
+        print("setting cell to tent")
         if let cell = gameInstance!.curCell {
-            //cell.setValue(Int(sender.titleLabel!.text!)!);
+            cell.setType(.tent)
+            cell.layer.borderWidth = 0
+            cell.layer.borderColor = UIColor.clear.cgColor
+            gameInstance!.curCell = nil
+        }
+    }
+    
+    @IBAction func setGrass(_ sender: UIButton) {
+        print("Setting cell to grass")
+        if let cell = gameInstance!.curCell {
+            cell.setType(.grass)
             cell.layer.borderWidth = 0
             cell.layer.borderColor = UIColor.clear.cgColor
             gameInstance!.curCell = nil

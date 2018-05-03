@@ -22,6 +22,13 @@ class TowersGame {
         newGame();
     }
     
+    func checkSolution() {
+        for i in 0..<5 {
+            self.rows[i].checkSolution()
+            self.cols[i].checkSolution()
+        }
+    }
+    
     private func transpose<T>(_ vals : [T]) -> [T]{
         var ret = vals
         ret.swapAt(1, 5)
@@ -109,12 +116,21 @@ class TowersCell : UIButton {
     
     private var value : Int?
     
-    func getValue() -> Int? {
-        return value
+    func getValue() -> Int {
+        return value ?? 0
+    }
+    
+    func setWrong() {
+        self.backgroundColor = UIColor.red
+    }
+    
+    func setNeutral() {
+        self.backgroundColor = UIColor(white: 0.83, alpha: 1)
     }
     
     func setValue(_ value : Int) {
         self.value = value
+        setNeutral()
         self.setTitle(String(describing:value), for: .normal)
     }
     
@@ -133,6 +149,14 @@ class TowersCellGroup {
         self.correct = []
         self.label1 = label1
         self.label2 = label2
+    }
+    
+    func checkSolution() {
+        for (index, cell) in cells.enumerated() {
+            if(cell.getValue() != correct[index] && cell.getValue() != 0) {
+                cell.setWrong()
+            }
+        }
     }
     
     func newGame(_ correct : [Int], debug : Bool = false) {
@@ -162,6 +186,7 @@ class TowersCellGroup {
         
         //setup button labels now
         for (index, cell) in cells.enumerated() {
+            cell.setValue(0)
             if(debug) {
                 cell.setTitle(String(describing:correct[index]), for: .normal)
             } else {

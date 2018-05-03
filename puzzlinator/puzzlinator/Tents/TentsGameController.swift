@@ -92,6 +92,13 @@ class TentsGame {
         }
     }
     
+    func checkSolution() {
+        for i in 0..<5 {
+            self.rows[i].checkSolution()
+            self.cols[i].checkSolution()
+        }
+    }
+    
 }
 
 class TentsCellGroup {
@@ -121,6 +128,8 @@ class TentsCellGroup {
                 break s
             case .grass:
                 break s
+            case .wrong:
+                break s
             case .tree:
                 break loop
             case .tent:
@@ -138,6 +147,8 @@ class TentsCellGroup {
             case .blank:
                 break s
             case .grass:
+                break s
+            case .wrong:
                 break s
             case .tree:
                 break loop
@@ -159,6 +170,14 @@ class TentsCellGroup {
             }
         }
         
+    }
+    
+    func checkSolution() {
+        for (index, cell) in cells.enumerated() {
+            if(cell.getType() == .tent && cell.getType() != correct[index]) {
+                cell.setType(.wrong)
+            }
+        }
     }
     
     func count() -> Int {
@@ -188,6 +207,7 @@ class TentsCell : UIButton {
         case grass
         case tree
         case tent
+        case wrong
     }
     
     func getType() -> tileType {
@@ -196,19 +216,26 @@ class TentsCell : UIButton {
     
     func setType(_ value : tileType) {
         self.type = value
-        self.titleLabel?.text = ""
         
         switch(self.type) {
         case .blank:
-            self.backgroundColor = UIColor.white
+            self.setTitle("", for: .normal)
+            self.backgroundColor = UIColor(white: 0.83, alpha: 1)
         case .grass:
+            self.setTitle("", for: .normal)
             self.backgroundColor = UIColor.green
         case .tree:
+            self.setTitle("", for: .normal)
             self.backgroundColor = UIColor.brown
         case .tent:
-            self.backgroundColor = UIColor.yellow
+            self.setTitle("T", for: .normal)
+            self.backgroundColor = UIColor.green
+        case .wrong:
+            self.setTitle("T", for: .normal)
+            self.backgroundColor = UIColor.red
         }
         
         
     }
+    
 }
