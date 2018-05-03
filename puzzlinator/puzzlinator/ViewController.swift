@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let gameNames = ["Suduko", "Towers", "8-puzzle", "Tents"]
+    let gameNames = ["Suduko", "Towers", "8Puzzle", "Tents"]
     let imageNames = ["placeholder", "placeholder", "placeholder", "placeholder"]
     let segues = ["toSudoku", "toTowers", "to8puzzle", "toTents"]
     

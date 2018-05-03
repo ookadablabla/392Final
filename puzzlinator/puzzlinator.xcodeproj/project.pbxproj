@@ -15,6 +15,7 @@
 		78DB65DE209B7F5A006A2F85 /* 8PuzzleHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB65DD209B7F5A006A2F85 /* 8PuzzleHelpViewController.swift */; };
 		78DB65E0209B8080006A2F85 /* TentsHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB65DF209B8080006A2F85 /* TentsHelpViewController.swift */; };
 		78DB65E2209B808F006A2F85 /* TowersHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB65E1209B808F006A2F85 /* TowersHelpViewController.swift */; };
+		78DB65E4209B861C006A2F85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DB65E3209B861C006A2F85 /* Images.xcassets */; };
 		C31736052096ACE800C97273 /* TentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31736042096ACE800C97273 /* TentsViewController.swift */; };
 		C31736072096AEB900C97273 /* TentsGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31736062096AEB900C97273 /* TentsGameController.swift */; };
 		C32763A2208BBEC500C9F365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32763A1208BBEC500C9F365 /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		78DB65DD209B7F5A006A2F85 /* 8PuzzleHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8PuzzleHelpViewController.swift; sourceTree = "<group>"; };
 		78DB65DF209B8080006A2F85 /* TentsHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentsHelpViewController.swift; sourceTree = "<group>"; };
 		78DB65E1209B808F006A2F85 /* TowersHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowersHelpViewController.swift; sourceTree = "<group>"; };
+		78DB65E3209B861C006A2F85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C31736042096ACE800C97273 /* TentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentsViewController.swift; sourceTree = "<group>"; };
 		C31736062096AEB900C97273 /* TentsGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentsGameController.swift; sourceTree = "<group>"; };
 		C327639E208BBEC500C9F365 /* puzzlinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = puzzlinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 				C32763AA208BBECE00C9F365 /* LaunchScreen.storyboard */,
 				C32763AD208BBECE00C9F365 /* Info.plist */,
 				780716FF208E295500C46BC4 /* TableViewCellViewController.swift */,
+				78DB65E3209B861C006A2F85 /* Images.xcassets */,
 			);
 			path = puzzlinator;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DB65E4209B861C006A2F85 /* Images.xcassets in Resources */,
 				C32763AC208BBECE00C9F365 /* LaunchScreen.storyboard in Resources */,
 				C32763A7208BBEC500C9F365 /* Main.storyboard in Resources */,
 			);
@@ -506,6 +510,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = puzzlinator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -523,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = puzzlinator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

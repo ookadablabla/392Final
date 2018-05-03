@@ -485,23 +485,7 @@ class SudokuViewController: UIViewController
         sqr87.addGestureRecognizer(tap87)
         sqr88.addGestureRecognizer(tap88)
         
-        for sqr in allSquares
-        {
-            sqr.text = String(sqr.tag)
-        }
-        
-        let games = game.randomPuzzle()
-        solved = games[0]
-        unsolved = games[1]
-        
-        fillPuzzle(numbers: unsolved)
-        
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        newGame()
     }
     
     @objc func onLabelClick(sender:UITapGestureRecognizer) {
@@ -622,6 +606,11 @@ class SudokuViewController: UIViewController
     @IBAction func doneClicked(_ sender: UIBarButtonItem)
     {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     /*
