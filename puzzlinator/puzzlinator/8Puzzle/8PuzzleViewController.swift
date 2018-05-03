@@ -13,8 +13,6 @@ class _PuzzleViewController: UIViewController
     var allSquares : [UILabel] = []
     var allPoints : [CGPoint] = []
     
-    var order : [[Int]] = []
-    
     @IBOutlet weak var blankLabel: UILabel!
     @IBOutlet weak var oneLabel: UILabel!
     @IBOutlet weak var twoLabel: UILabel!
@@ -35,22 +33,7 @@ class _PuzzleViewController: UIViewController
     var sevenPoint : CGPoint = CGPoint()
     var eightPoint : CGPoint = CGPoint()
     
-    var selectedA : UILabel = UILabel()
-    var selectedB : UILabel = UILabel()
-    
     @IBOutlet weak var moveButton: UIButton!
-    
-    func checkIfDone() -> Bool
-    {
-        for (sqrIndex, sqr) in allSquares.enumerated()
-        {
-            if sqr.center != allPoints[sqrIndex]
-            {
-                return false
-            }
-        }
-        return true
-    }
     
     override func viewDidLoad()
     {
@@ -125,27 +108,6 @@ class _PuzzleViewController: UIViewController
         randomizeGame()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func getPositionOfInt(num : Int) -> [Int]
-    {
-        for (indexR, row) in order.enumerated()
-        {
-            for (indexC, col) in row.enumerated()
-            {
-                if col == num
-                {
-                    return [indexR, indexC]
-                }
-            }
-        }
-        
-        return []
-    }
-    
     func swapTile(tile : UILabel, duration : TimeInterval)
     {
         UIView.animate(withDuration: duration, delay: 0, animations: {
@@ -173,31 +135,17 @@ class _PuzzleViewController: UIViewController
             }))
 
             self.present(alert, animated: true)
-
-        }
-        else
-        {
-            return
         }
     }
     
     func canShift(label : UILabel) -> Bool
     {
-        if (label.center.x == blankLabel.center.x && abs(label.center.y-blankLabel.center.y) < 200) ||
+        return (label.center.x == blankLabel.center.x && abs(label.center.y-blankLabel.center.y) < 200) ||
             (label.center.y == blankLabel.center.y && abs(label.center.x-blankLabel.center.x) < 200)
-        {
-            return true
-        }
-        else
-        {
-            return false
-        }
     }
-    
     
     @objc func switch1(sender:UITapGestureRecognizer)
     {
-        print("tap working1")
         if canShift(label: oneLabel)
         {
             swapTile(tile: oneLabel, duration: 0.5)
@@ -207,7 +155,6 @@ class _PuzzleViewController: UIViewController
     
     @objc func switch2(sender:UITapGestureRecognizer)
     {
-        print("tap working2")
         if canShift(label: twoLabel)
         {
             swapTile(tile: twoLabel, duration: 0.5)
@@ -217,7 +164,6 @@ class _PuzzleViewController: UIViewController
 
     @objc func switch3(sender:UITapGestureRecognizer)
     {
-        print("tap working3")
         if canShift(label: threeLabel)
         {
             swapTile(tile: threeLabel, duration: 0.5)
@@ -227,7 +173,6 @@ class _PuzzleViewController: UIViewController
 
     @objc func switch4(sender:UITapGestureRecognizer)
     {
-        print("tap working4")
         if canShift(label: fourLabel)
         {
             swapTile(tile: fourLabel, duration: 0.5)
@@ -237,7 +182,6 @@ class _PuzzleViewController: UIViewController
 
     @objc func switch5(sender:UITapGestureRecognizer)
     {
-        print("tap working5")
         if canShift(label: fiveLabel)
         {
             swapTile(tile: fiveLabel, duration: 0.5)
@@ -247,7 +191,6 @@ class _PuzzleViewController: UIViewController
 
     @objc func switch6(sender:UITapGestureRecognizer)
     {
-        print("tap working6")
         if canShift(label: sixLabel)
         {
             swapTile(tile: sixLabel, duration: 0.5)
@@ -257,7 +200,6 @@ class _PuzzleViewController: UIViewController
 
     @objc func switch7(sender:UITapGestureRecognizer)
     {
-        print("tap working7")
         if canShift(label: sevenLabel)
         {
             swapTile(tile: sevenLabel, duration: 0.5)
@@ -267,7 +209,6 @@ class _PuzzleViewController: UIViewController
 
     @objc func switch8(sender:UITapGestureRecognizer)
     {
-        print("tap working8")
         if canShift(label: eightLabel)
         {
             swapTile(tile: eightLabel, duration: 0.5)
@@ -278,6 +219,11 @@ class _PuzzleViewController: UIViewController
     @IBAction func doneClicked(_ sender: UIBarButtonItem)
     {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     /*
