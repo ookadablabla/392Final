@@ -49,6 +49,8 @@ class TentsGame {
     
     let seeds = [
         "abccaccccbababcccccbcccca",
+        "acacabcbbbcacaccbcccbacba",
+        "ccacaabbbbcccacccbccccacc"
     ]
     
     func newGame() {

@@ -1761,10 +1761,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Objective: " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-k7-bKb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-k7-bKb">
                                 <rect key="frame" x="16" y="80" width="343" height="567"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Objective: Find all of the hidden tents. Each tent is attached to one tree, represented by a brown square (so there are as many tents as there are trees). The numbers across the top and down the side tell you how many tents are in the respective row or column. A tent can only be found horizontally or vertically adjavent to a tree. Tents are never adjacent to each other, vertically, horizontally, or diagonally. A tree might be next to two tents, but is only connected to one.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -2283,13 +2284,6 @@
                                     <action selector="newGameButton:" destination="8XI-BF-PU4" eventType="touchUpInside" id="dPy-6D-jZp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Towers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akh-Fw-8DI">
-                                <rect key="frame" x="16" y="66" width="343" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kin-HR-02M">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -2393,10 +2387,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Objective: " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFh-Gz-RIq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFh-Gz-RIq">
                                 <rect key="frame" x="16" y="80" width="343" height="567"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Objective: Fill in the grid with towers whose heights range from 1 to 5, so that every possible height appears exactly once in each row and column, and that each clue around the edge counts the number of towers that are visible when looking into the grid from that direction. Taller towers hide shorter ones behind them, so the sequence 2, 1, 4, 3, 5 would match a clue of 3 on the left (since the 2 hides the 1, and the 4 hides the 3), and 1 on the right (since the 5 hides everything).</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
