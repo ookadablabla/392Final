@@ -109,10 +109,14 @@ class _PuzzleViewController: UIViewController
     {
         var i = 0
         
-        while i < 100
+        while i < 50
         {
-            swapTile(tile: allSquares[Int(arc4random_uniform(UInt32(allSquares.count)))])
-            i += 1
+            let label : UILabel = allSquares[Int(arc4random_uniform(UInt32(allSquares.count)))]
+            if canShift(label: label)
+            {
+                swapTile(tile: label, duration: 0.2)
+                i += 1
+            }
         }
     }
     
@@ -142,9 +146,9 @@ class _PuzzleViewController: UIViewController
         return []
     }
     
-    func swapTile(tile : UILabel)
+    func swapTile(tile : UILabel, duration : TimeInterval)
     {
-        UIView.animate(withDuration: 1, delay: 0, animations: {
+        UIView.animate(withDuration: duration, delay: 0, animations: {
             let temp : CGPoint = tile.center
             tile.center = self.blankLabel.center
             self.blankLabel.center = temp
@@ -196,7 +200,7 @@ class _PuzzleViewController: UIViewController
         print("tap working1")
         if canShift(label: oneLabel)
         {
-            swapTile(tile: oneLabel)
+            swapTile(tile: oneLabel, duration: 0.5)
             checkForWin()
         }
     }
@@ -206,7 +210,7 @@ class _PuzzleViewController: UIViewController
         print("tap working2")
         if canShift(label: twoLabel)
         {
-            swapTile(tile: twoLabel)
+            swapTile(tile: twoLabel, duration: 0.5)
             checkForWin()
         }
     }
@@ -216,7 +220,7 @@ class _PuzzleViewController: UIViewController
         print("tap working3")
         if canShift(label: threeLabel)
         {
-            swapTile(tile: threeLabel)
+            swapTile(tile: threeLabel, duration: 0.5)
             checkForWin()
         }
     }
@@ -226,7 +230,7 @@ class _PuzzleViewController: UIViewController
         print("tap working4")
         if canShift(label: fourLabel)
         {
-            swapTile(tile: fourLabel)
+            swapTile(tile: fourLabel, duration: 0.5)
             checkForWin()
         }
     }
@@ -236,7 +240,7 @@ class _PuzzleViewController: UIViewController
         print("tap working5")
         if canShift(label: fiveLabel)
         {
-            swapTile(tile: fiveLabel)
+            swapTile(tile: fiveLabel, duration: 0.5)
             checkForWin()
         }
     }
@@ -246,7 +250,7 @@ class _PuzzleViewController: UIViewController
         print("tap working6")
         if canShift(label: sixLabel)
         {
-            swapTile(tile: sixLabel)
+            swapTile(tile: sixLabel, duration: 0.5)
             checkForWin()
         }
     }
@@ -256,7 +260,7 @@ class _PuzzleViewController: UIViewController
         print("tap working7")
         if canShift(label: sevenLabel)
         {
-            swapTile(tile: sevenLabel)
+            swapTile(tile: sevenLabel, duration: 0.5)
             checkForWin()
         }
     }
@@ -266,7 +270,7 @@ class _PuzzleViewController: UIViewController
         print("tap working8")
         if canShift(label: eightLabel)
         {
-            swapTile(tile: eightLabel)
+            swapTile(tile: eightLabel, duration: 0.5)
             checkForWin()
         }
     }
