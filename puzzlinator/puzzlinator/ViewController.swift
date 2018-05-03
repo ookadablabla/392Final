@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let gameNames = ["Suduko", "Towers", "8-puzzle", "Tents"]
     let imageNames = ["placeholder", "placeholder", "placeholder", "placeholder"]
-    let segues = ["toSudoku", "toTowers", "to8puzzle", "toTents"		]
+    let segues = ["toSudoku", "toTowers", "to8puzzle", "toTents"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gameNames.count;

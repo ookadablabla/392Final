@@ -121,6 +121,11 @@ class TentsViewController : UIViewController {
         print("created game instance")
     }
     
+    
+    @IBAction func doneClicked(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
