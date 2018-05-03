@@ -866,6 +866,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Sudoku" id="9MB-Jz-fXy">
+                                        <barButtonItem key="leftBarButtonItem" title="Help" id="WYq-f6-0z5">
+                                            <connections>
+                                                <segue destination="JSO-s4-pBX" kind="show" id="cqH-X1-but"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="3Qh-7O-8eN">
                                             <connections>
                                                 <action selector="doneClicked:" destination="O9t-iF-w7F" id="6P1-Sn-bDA"/>
@@ -964,7 +969,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkX-jJ-b9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="-654.42278860569718"/>
+            <point key="canvasLocation" x="844" y="-1155"/>
         </scene>
         <!--8puzzle-->
         <scene sceneID="XNq-Or-1ia">
@@ -979,6 +984,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="8Puzzle" id="rG7-bZ-j4V">
+                                        <barButtonItem key="leftBarButtonItem" title="Help" id="h5x-9q-5CZ">
+                                            <connections>
+                                                <segue destination="g5P-df-ioN" kind="show" id="A7B-vs-I43"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="ekK-Ea-mxC">
                                             <connections>
                                                 <action selector="doneClicked:" destination="hVB-Px-HMn" id="bh0-9R-nJe"/>
@@ -1095,6 +1105,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XU-09-gzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1768.8" y="-416.0419790104948"/>
+        </scene>
+        <!--Puzzle Help View Controller-->
+        <scene sceneID="V1n-tt-Tq1">
+            <objects>
+                <viewController id="g5P-df-ioN" customClass="_PuzzleHelpViewController" customModule="puzzlinator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sNp-I5-oXs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4g-mo-0Bh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="8Puzzle" id="2LG-nC-xKl">
+                                        <barButtonItem key="rightBarButtonItem" title="Close" id="daB-vJ-LU7">
+                                            <connections>
+                                                <action selector="closeClicked:" destination="g5P-df-ioN" id="7cc-56-Iqs"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMX-b3-qWj">
+                                <rect key="frame" x="16" y="73" width="343" height="567"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Objective: Slide the tiles to the correct order. You can only slide tiles next to the blank tile. The final order should have the blank tile in the upper left corner, followed by the numbers in increasing order.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vkz-yE-lK6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SI2-2o-1AZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2697" y="-416"/>
+        </scene>
+        <!--Sudoku Help View Controller-->
+        <scene sceneID="NSN-ph-oeq">
+            <objects>
+                <viewController id="JSO-s4-pBX" customClass="SudokuHelpViewController" customModule="puzzlinator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Je8-E2-ADk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qwR-o3-vnR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Sudoku" id="485-kq-gRL">
+                                        <barButtonItem key="rightBarButtonItem" title="Close" id="AOm-Jp-TjX">
+                                            <connections>
+                                                <action selector="closeClicked:" destination="JSO-s4-pBX" id="nV1-Hx-vwo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clB-DU-yH3">
+                                <rect key="frame" x="16" y="73" width="343" height="567"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Objective: Fill a 9x9 grid so that each column, each row, and each 3x3 block contains the digits 1 to 9, without repeating digits. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Iuy-83-9MU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0t-6L-yq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="-1155"/>
         </scene>
         <!--tents-->
         <scene sceneID="iqt-WF-OIv">
@@ -1486,7 +1572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQd-xj-LSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="596.85157421289364"/>
+            <point key="canvasLocation" x="844" y="995"/>
         </scene>
         <!--towers-->
         <scene sceneID="sTe-sG-VLH">
