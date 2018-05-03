@@ -969,7 +969,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkX-jJ-b9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="-1155"/>
+            <point key="canvasLocation" x="1262" y="-807"/>
         </scene>
         <!--8puzzle-->
         <scene sceneID="XNq-Or-1ia">
@@ -1104,7 +1104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XU-09-gzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.8" y="-416.0419790104948"/>
+            <point key="canvasLocation" x="2846" y="-416"/>
         </scene>
         <!--Puzzle Help View Controller-->
         <scene sceneID="V1n-tt-Tq1">
@@ -1142,7 +1142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SI2-2o-1AZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2697" y="-416"/>
+            <point key="canvasLocation" x="3686" y="-416"/>
         </scene>
         <!--Sudoku Help View Controller-->
         <scene sceneID="NSN-ph-oeq">
@@ -1180,7 +1180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0t-6L-yq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="-1155"/>
+            <point key="canvasLocation" x="2081" y="-807"/>
         </scene>
         <!--tents-->
         <scene sceneID="iqt-WF-OIv">
@@ -1577,7 +1577,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQd-xj-LSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="995"/>
+            <point key="canvasLocation" x="1262" y="629"/>
         </scene>
         <!--Tents Help View Controller-->
         <scene sceneID="JdZ-0v-cJt">
@@ -1614,7 +1614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gc-HW-lcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698" y="994"/>
+            <point key="canvasLocation" x="2081" y="628"/>
         </scene>
         <!--towers-->
         <scene sceneID="sTe-sG-VLH">
@@ -2161,7 +2161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60r-o9-Gz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760.8" y="276.61169415292358"/>
+            <point key="canvasLocation" x="2846" y="248"/>
         </scene>
         <!--Towers Help View Controller-->
         <scene sceneID="9rp-ER-WJl">
@@ -2198,7 +2198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6p-37-NdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2697" y="277"/>
+            <point key="canvasLocation" x="3687" y="248"/>
         </scene>
     </scenes>
 </document>
